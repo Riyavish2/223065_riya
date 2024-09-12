@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="icon" href="./Images/hotel.jpg" type="image/x-icon">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url('./Images/home.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            height: 250px;
+            width: 300px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            color: white;
+        }
+
+        h2 {
+            margin: 0;
+            padding: 10px;
+            color: wheat;
+            font-size: 1.5rem;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            font-size: 16px;
+            color: #007bff;
+            text-decoration: none;
+            margin-top: 10px;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+        h2:hover
+        {
+            cursor: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/" class="main" method="post">
+        <h2>Welcome to Shinenstar</h2>
+        <button type="submit">Visit site</button>
+        <a href="./login">Login</a>
+        <a href="./home">skip for now</a>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="./Images/hotel.jpg" type="image/x-icon">
+
+</head>
+<style>body {
+    background-image: url('./Images/login1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Ensure the body takes full height */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center container for form */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Form container styling */
+.form-container {
+    width: 90%;
+    max-width: 600px; /* Limit the maximum width */
+    padding: 20px;
+    background-color: transparent; /* Slightly opaque background */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Lighter border */
+    backdrop-filter: blur(10px); /* Reduced blur for a cleaner look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow for more contrast */
+    border-radius: 12px; /* Slightly larger border-radius for a softer edge */
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center;
+    text-align: center;
+}
+
+/* Heading styling */
+h1 {
+    color: rgb(240, 52, 84);
+    font-size: 3rem; /* Responsive font size */
+    text-shadow: 2px 2px rgba(240, 127, 146, 0.8); /* Softer shadow */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Input field styling */
+input {
+    height: 40px;
+    width: 100%; /* Make input full width of container */
+    max-width: 500px; /* Restrict maximum width */
+    border: 2px solid rgba(232, 220, 220, 0.6); /* Slightly transparent border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Standard font size */
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5); /* Light background */
+    padding: 0 10px; /* Add padding inside input */
+    margin-bottom: 15px; /* Space below input */
+    transition: border-color 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.6); /* Darker placeholder text */
+}
+
+/* Button styling */
+button {
+    height: 40px; /* Match height with input fields */
+    width: 150px;
+    border: none;
+    background-color: rgb(240, 52, 84);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+button:hover {
+    background-color: rgb(167, 20, 44); /* Darker shade on hover */
+}
+
+/* Paragraph and link styling */
+p {
+    color: rgb(23, 22, 22);
+    font-weight: bold;
+    margin-top: 20px; /* Space above paragraph */
+}
+
+a {
+    color: rgb(240, 52, 84);
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+a:hover {
+    color: rgb(167, 20, 44); /* Darker shade on hover */
+}
+
+/* Margin for last element */
+.last {
+    margin-top: 20px; /* Add space above the last element */
+}
+
+span {
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Smaller font size for heading */
+    }
+
+    input {
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        height: 35px;
+        width: 130px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Further reduce font size for heading */
+    }
+
+    .form-container {
+        padding: 15px; /* Reduce padding in the container */
+        border-radius: 10px; /* Slightly smaller border-radius */
+    }
+
+    input {
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    button {
+        height: 30px;
+        width: 120px;
+        font-size: 0.8rem;
+    }
+
+    p {
+        font-size: 0.9rem; /* Slightly smaller paragraph text */
+    }
+
+    a {
+        font-size: 0.9rem; /* Slightly smaller link text */
+    }
+}
+</style>
+<body>
+     <h1 >Welcome to ShineNstar</h1>
+    <div class="main-container">
+     <div class="form-container">
+            <form action="/login" method="post">
+     <span><%=message%></span>
+
+                <input for="email" id="mail" placeholder="Enter Your Email" type="email" name="email"  required  autofocus><br><br>
+                <input for="password" id="password" placeholder="Enter your Password" name="password" type="password"  required><br><br>
+                <button >Continue</button>
+               <p>Dont have an account?<a href="./signup">Register</a></p>
+               <a class="last" href="./forget">forget password</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

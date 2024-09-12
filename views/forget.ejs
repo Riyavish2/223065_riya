@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Form</title>
+    <link rel="icon" href="./Images/hotel.jpg" type="image/x-icon">
+
+</head>
+<style>body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: url(./info_images/forget.jpg);
+    background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+}
+
+.centered-heading {
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.centered-div {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+label {
+    margin-right: 10px;
+    color: black;
+
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+}
+button
+{
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+}
+input{    color: black;
+}
+</style>
+<body>
+    <h1 class="centered-heading">Forget password</h1>
+    <div class="centered-div">
+        <form action="/forget" method="post">
+            <label for="email">Enter Email</label>
+        <input type="email" id="inputField" name="email"  autofocus required>
+        <button type="submit">Done</button>
+        </form>
+    </div>
+</body>
+</html>
+
+</html>

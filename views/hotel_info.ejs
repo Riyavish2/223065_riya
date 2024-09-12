@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel information</title>
+    <link rel="icon" href="./Images/hotel.jpg" type="image/x-icon">
+
+</head>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Logo section */
+.logo img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Text1 styling */
+.text1 span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Text3 styling */
+.text3 span {
+    font-size: 18px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.info-sec {
+    margin-left: 90px;
+    height: 350px;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.for-head h2 {
+    padding-top: 15px;
+}
+
+.img-sec {
+    margin-top: 13px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+}
+
+.img-sec1 {
+    height: inherit;
+    width: 50%;
+    border: 2px solid white;
+}
+
+.img-sec1i {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.sub {
+    height: 100%;
+    width: 50%;
+    outline: 5px solid white;
+}
+
+.about-sec {
+    width: 80%;
+    height: 400px;
+    margin-top: 65px;
+    display: flex;
+    margin-left: 90px;
+}
+
+.in-about-sec {
+    height: inherit;
+    width: 60%;
+}
+
+.in-about-sec h3 {
+    font-size: 30px;
+}
+
+.in-about-sec p {
+    font-size: 20px;
+}
+
+.feedback {
+    margin-top: 21px;
+    border-top: 2px solid rgb(23, 25, 23);
+    border-bottom: 2px solid rgb(36, 39, 36);
+    height: 80%;
+}
+
+.user-info {
+    width: 40%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    height: 80%;
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px 2px lightgray;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.for-dates {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 80%;
+    height: 40%;
+    border-radius: 2px;
+    outline: 2px solid rgb(178, 174, 174);
+}
+
+.sub-dates {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+    display: flex;
+}
+
+.date-input {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.sub-parts {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.dates {
+    width: 50%;
+    height: 100%;
+    border: 1px solid rgb(116, 141, 116);
+}
+
+#button01 {
+    margin-top: 15px;
+    background-color: rgb(240, 52, 84);
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    height: 30px;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.for-taxes {
+    margin-left: 30px;
+    width: 80%;
+    height: 80px;
+    margin-top: 15px;
+    border-top: 1px solid rgb(199, 191, 191);
+}
+
+#price1 {
+    float: left;
+    margin-top: 25px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+#price2 {
+    float: right;
+    margin-top: 25px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.dates input {
+    width: 100%;
+    height: inherit;
+    border: none;
+    font-weight: bolder;
+    font-size: 15px;
+    color: rgb(199, 191, 191);
+}
+
+.sub-parts input {
+    width: 100%;
+    font-weight: bolder;
+    font-size: 15px;
+    color: rgb(199, 191, 191);
+}
+
+option {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .info-sec {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .about-sec {
+        margin-left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-info {
+        width: 100%;
+    }
+
+    .form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .img-sec1,
+    .sub {
+        width: 100%;
+    }
+
+    .about-sec {
+        height: auto;
+    }
+
+    .form {
+        width: 95%;
+    }
+
+    #button01 {
+        width: 100%;
+    }
+
+    .for-dates,
+    .for-taxes {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #price1,
+    #price2 {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text1 span {
+        font-size: 20px;
+    }
+
+    .text3 span {
+        font-size: 16px;
+    }
+
+    .img-sec1,
+    .sub {
+        width: 100%;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .in-about-sec h3 {
+        font-size: 24px;
+    }
+
+    .in-about-sec p {
+        font-size: 16px;
+    }
+
+    .for-dates,
+    .for-taxes {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #price1,
+    #price2 {
+        font-size: 20px;
+    }
+}
+
+    </style>
+<body>
+    <div class="main">
+        <div class="logo"><img src="Images/hotel.jpg" alt="hotel"> </div>
+        <div class="text1"><span>Hotel Information</span></div>
+        <div class="text3"><span>ShineNstar Home</span></div>
+    </div>
+    <div class="info-sec">
+        <div class="for-head"><h2><%= product[0][0].hotel_name%>  </h2></div>
+        <div class="img-sec">
+            <div class="img-sec1">
+                
+                <img src="<%= product[0][0].image1%>" width="100%" height="100%">
+            </div>
+            <div class="img-sec1">
+                <div class="img-sec1i">
+                    <div class="sub">
+                        <img src="<%= product[0][0].image2%>" width="100%" height="100%">
+                    </div>
+                    <div class="sub">
+                        <img src="<%= product[0][0].image3%>" width="100%" height="100%">
+                    </div>
+                </div>
+                <div class="img-sec1i">
+                    <div class="sub">
+                        <img src="<%= product[0][0].image4%>" width="100%" height="100%">
+                    </div>
+                    <div class="sub">
+                        <img src="<%= product[0][0].image5%>" width="100%" height="100%">
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <!-- div ends here -->
+    <div class="about-sec">
+        <div class="in-about-sec">
+            <h3 id="name"><%= product[0][0].info%></h3>
+            <p>1 double bedPrivate attached bathroom</p>
+            <div class="feedback">
+                <h3>About this place</h3>
+                <p ><%= product[0][0].about%></p>
+            </div>
+        </div>
+        <div class="user-info">
+            <div class="form">
+                <span class="price"><%= product[0][0].price%></span><span>night</span>
+                <div class="for-dates">
+                    <div class="sub-parts">
+                    <input for="date" placeholder="Enter date" type="date" name="bookDate" required>
+                    </div>
+                    <form action="/hotelInfo" method="post">
+                    <div class="sub-parts" style="width: 100%;height: 100%;">
+                        <select id="Guesst" name="guest" style="width: 100%;">
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <option value="4">Four</option>
+                          </select>
+                </div>
+                    <input type="submit" id="button01" value="Reserve">
+                </form>
+                
+                <div class="for-taxes"> 
+                    <span id="price1">Total Taxes</span>
+                    <span id="price2"><%= product[0][0].price%></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    // Store the original price when the page loads
+    const originalPriceText = document.getElementById("price2").textContent;
+    const originalPrice = Number(originalPriceText.replace('$', ''));
+
+    document.getElementById('Guesst').addEventListener('change', function() {
+        const val = this.value;
+        let updatedPrice;
+
+        if (val === "1") {
+            updatedPrice = originalPrice;
+        } else if (val === "2") {
+            updatedPrice = originalPrice * 2;
+        } else if (val === "3") {
+            updatedPrice = originalPrice * 3;
+        } else if (val === "4") {
+            updatedPrice = originalPrice * 4;
+        } else {
+            updatedPrice = originalPrice; // Default to the original price
+        }
+
+        // Update the price displayed in the DOM
+        document.getElementById("price2").textContent = "" + updatedPrice;
+    });
+});
+
+// const button = document.getElementById("button01");
+//     const name= document.getElementById("name").textContent;
+// const price =document.getElementById("price2").textContent;
+// data.addEventListener("click",function ()
+//             {
+//                window.location.href = `/hotelInfo?id=${id}&name=${name}&price=${price}`;
+//             })
+    // sending details to the strip
+   
+    </script>
+    
+</html>

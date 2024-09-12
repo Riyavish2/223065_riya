@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Hub</title>
+    <script src="https://kit.fontawesome.com/4dac172e20.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./Images/hotel.jpg" type="image/x-icon">
+
+</head>
+<style>/* Global Styles */
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        overflow-x: hidden;
+    }
+    
+    /* Navbar Styles */
+    .nav-bar {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        color: black;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 0 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    .logo img {
+        height: 60px;
+        border-radius: 50%;
+    }
+    
+    .nav-bar .nav-links {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .nav-bar .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 0 15px;
+        line-height: 80px;
+        transition: color 0.3s ease;
+    }
+    
+    .nav-bar .nav-links a:hover {
+        color: #f0f0f0;
+    }
+    
+    .nav-bar .highlight {
+        font-size: 24px;
+        font-weight: bold;
+        cursor: default;
+        line-height: 80px;
+        transition: color 0.3s ease;
+    }
+    
+    .nav-bar .button-group {
+        display: flex;
+    }
+    
+    .button-group .button {
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 10px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .button-group .button:hover {
+        background-color: #0056b3;
+    }
+    
+    .logout {
+        /* background-color: #007bff; */
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 2px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        border: 2px solid rgb(90, 90, 168) ;
+    }
+    .logout:hover
+    {
+        background-color: #9acbff;
+        border-radius: 10px;
+
+    }
+    /* Image Section */
+    .img-sec {
+        padding: 0 20px;
+    }
+    
+    .sub-img-sec {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    
+    .img-slot {
+        flex: 1 1 calc(25% - 20px);
+        margin: 10px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .text3:hover
+    {
+        cursor: none;
+    }
+    .img-slot img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+    
+    .img-slot span {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background-color: #fff;
+        color: #333;
+        font-size: 16px;
+        border-radius: 0 0 8px 8px;
+    }
+    
+    .img-slot:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Footer Styles */
+    footer {
+        width: 100%;
+        height: 70px;
+        background-color: white;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+    }
+    
+    footer p {
+        margin: 0;
+        font-size: 18px;
+    }
+     .text2 a
+    {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .text1 a
+    {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .button1 a
+    {
+        text-decoration: none;
+        color: white;
+    }
+    .nav-bar a
+    {
+        background-color: non
+        ;
+    }
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+        .nav-bar {
+            flex-direction: column;
+            height: auto;
+            padding: 10px 20px;
+        }
+    
+        .nav-bar .nav-links {
+            flex-direction: column;
+            margin-top: 10px;
+        }
+    
+        .nav-bar .nav-links a {
+            padding: 10px 0;
+            line-height: normal;
+        }
+    
+        .nav-bar .button-group {
+            margin-top: 10px;
+        }
+    
+        .img-slot {
+            flex: 1 1 calc(50% - 20px);
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .img-slot {
+            flex: 1 1 calc(100% - 20px);
+        }
+    
+        .nav-bar .highlight {
+            font-size: 20px;
+        }
+    
+        .nav-bar .nav-links a {
+            font-size: 16px;
+        }
+    
+        footer p {
+            font-size: 16px;
+        }
+    }
+    </style>
+<body>
+    <div class="nav-bar">
+        <div class="logo"><img src="./Images/hotel.jpg" alt="hotel"> </div>
+        <div class="text1"><a href="./stays">Stays</a></div>
+        <div class="text2"><a href="./exp">Experience</a></div>
+        <div class="text3"><span style="font-weight: bold;font-size: 20px;">ShineNstar Home</span></div>
+       
+        <% if (user) { %>
+            <div style="display: flex;margin: 40px;">
+                
+                <div>
+                    <span id="name" style="margin-right: 10px;font-weight: bold;font-size: 20px;"><%= userName %>!</span>
+                </div>
+                <div >
+                    <a href="./logout" class="logout" >Logout</a>
+                </div>
+            </div>
+        <% } else { %>
+            <div style="display: flex;margin: 40px;">
+                <!-- <form action="/login" method="get" class="button1"> -->
+                    <div><a href="./login" class="logout">LogIn</a></div>
+                    <!-- </form> -->
+                    <!-- <form action="/signup" method="get" class="button2"> -->
+                        <div style="margin-left: 10px;"><a href="./signup" class="logout">Signup</a></div>
+                    <!-- </form> -->
+            </div>
+            
+        <% } %>
+    </div>
+    
+    <div class="img-sec">
+         <div class="sub-img-sec" >
+            <div class="img-slot">
+                <div id="div1"><img src="./Images/hotel1.jpeg" width="100%" height="300px" >
+                </div>
+                <span><%=product[0].hotel_name%></span><br>
+                    <span><%=product[0].price%><span style="color: rgb(123, 126, 128);"> night</span></span><span style="display: none;">1</span><br>
+                   
+            </div>
+            <div class="img-slot">
+                <div id="div2"><img src="./Images/hotel2.jpeg" width="100%" height="300px"></div>
+                <span><%=product[1].hotel_name%></span><br>
+                    <span><%=product[1].price%><span style="color: rgb(123, 126, 128);"> night</span></span><span style="display: none;">2</span><br>
+
+
+            </div>
+            <div class="img-slot">
+                <div id="div3"><img src="./Images/hotel3.jpeg" width="100%" height="300px">  
+                </div>
+                <span><%=product[2].hotel_name%></span><br>
+                    <span><%=product[2].price%><span style="color: rgb(123, 126, 128);"> night</span></span><span style="display: none;">3</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div4"><img src="./Images/hotel4.jpeg" width="100%" height="300px">
+        
+                </div>
+                <span><%=product[3].hotel_name%></span><br>
+                    <span><%=product[3].price%><span style="color: rgb(123, 126, 128);"> night</span></span><span style="display: none;">4</span><br>
+            </div>
+         </div>
+         <div class="sub-img-sec">
+            <div class="img-slot">
+                <div id="div5"><img src="./Images/hotel5.jpeg" width="100%" height="300px">
+                </div>
+                <span><%=product[4].hotel_name%></span><br>
+                    <span><%=product[4].price%><span style="color: rgb(123, 126, 128);"> night</span></span><span style="display: none;">5</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div6"><img src="./Images/hotel6.jpeg" width="100%" height="300px"></div>
+                <span><%=product[5].hotel_name%></span><br>
+                    <span><%=product[5].price%><span style="color: rgb(123, 126, 128);"> night</span></span><span style="display: none;">6</span><br>
+
+            </div>
+            <div class="img-slot">
+                <div id="div7"><img src="./Images/hotel7.jpeg" width="100%" height="300px"></div>
+                <span><%=product[6].hotel_name%></span><br>
+                    <span><%=product[6].price%><span style="color: rgb(123, 126, 128);"> night</span></span><span style="display: none;">7</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div8"><img src="./Images/hotel8.jpeg" width="100%" height="300px"></div>
+                <span><%=product[7].hotel_name%></span><br>
+                    <span><%=product[7].price%><span style="color: rgb(123, 126, 128);"> night</span></span><span style="display: none;">8</span><br>
+            </div>
+         </div>
+         <div class="sub-img-sec">
+            <div class="img-slot">
+                <div id="div9"><img src="./Images/hotel9.jpeg" width="100%" height="300px"></div>
+                <span><%=product[8].hotel_name%></span><br>
+                    <span><%=product[8].price%><span style="color: rgb(123, 126, 128);">night</span></span><span style="display: none;">9</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div10"><img src="./Images/hotel10.jpeg" width="100%" height="300px"></div>
+                <span><%=product[9].hotel_name%></span><br>
+                    <span><%=product[9].price%><span style="color: rgb(123, 126, 128);"> night</span></span><span style="display: none;">10</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div11"><img src="./Images/hotel11.jpeg" width="100%" height="300px"></div>
+                <span><%=product[10].hotel_name%></span><br>
+                    <span><%=product[10].price%><span style="color: rgb(123, 126, 128);"> night</span></span><span style="display: none;">11</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div12"><img src="./Images/hotel12.jpeg" width="100%" height="300px"></div>
+                <span><%=product[11].hotel_name%></span><br>
+                    <span>><%=product[11].price%><span style="color: rgb(123, 126, 128);"> night</span></span><span style="display: none;">12</span><br>
+            </div>
+         </div>
+         <div class="sub-img-sec">
+            <div class="img-slot">
+                <div id="div13"><img src="./Images/hotel13.jpeg" width="100%" height="300px"></div>
+                <span><%=product[12].hotel_name%></span><br>
+                    <span><%=product[12].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">13</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div14"><img src="./Images/hotel14.jpeg" width="100%" height="300px"></div>
+                <span><%=product[13].hotel_name%></span><br>
+                    <span><%=product[13].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">14</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div15"><img src="./Images/hotel15.jpeg" width="100%" height="300px"></div>
+                <span><%=product[14].hotel_name%></span><br>
+                    <span><%=product[14].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">15</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div16"><img src="./Images/hotel16.jpeg" width="100%" height="300px"></div>
+                <span><%=product[15].hotel_name%></span><br>
+                    <span><%=product[15].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">16</span><br>
+            </div>
+         </div>
+         <div class="sub-img-sec">
+            <div class="img-slot">
+                <div id="div17"><img src="./Images/hotel17.jpeg" width="100%" height="300px"></div>
+                <span><%=product[16].hotel_name%></span><br>
+                    <span><%=product[16].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">17</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div18"><img src="./Images/hotel18.jpeg" width="100%" height="300px"></div>
+                <span><%=product[17].hotel_name%></span><br>
+                    <span><%=product[17].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">18</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div19"><img src="./Images/hotel9.jpeg" width="100%" height="300px"></div>
+                <span><%=product[18].hotel_name%></span><br>
+                    <span><%=product[18].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">19</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div20"><img src="./Images/hotel20.jpeg" width="100%" height="300px"></div>
+                <span><%=product[19].hotel_name%></span><br>
+                    <span><%=product[19].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">20</span><br>
+            </div>
+         </div>
+         <div class="sub-img-sec">
+            <div class="img-slot">
+                <div id="div21"><img src="./Images/hotel21.jpeg" width="100%" height="300px"></div>
+                <span><%=product[20].hotel_name%></span><br>
+                    <span><%=product[20].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">21</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div22"><img src="./Images/hotel22.jpeg" width="100%" height="300px"></div>
+                <span><%=product[21].hotel_name%></span><br>
+                    <span><%=product[21].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">22</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div23"><img src="./Images/hotel23.jpeg" width="100%" height="300px"></div>
+                <span><%=product[22].hotel_name%></span><br>
+                    <span><%=product[22].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">23</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div24"><img src="./Images/hotel24.jpeg" width="100%" height="300px"></div>
+                <span><%=product[23].hotel_name%></span><br>
+                    <span><%=product[23].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">24</span><br>
+            </div>
+ 
+         </div>
+         <div class="sub-img-sec" >
+            <div class="img-slot">
+                <div id="div25"><img src="./Images/hotel25.jpeg" width="100%" height="300px"></div>
+                <span><%=product[24].hotel_name%></span><br>
+                    <span><%=product[24].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">25</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div26"><img src="./Images/hotel26.jpeg" width="100%" height="300px"></div>
+                <span><%=product[25].hotel_name%></span><br>
+                    <span><%=product[25].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">26</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div27"><img src="./Images/hotel27.jpeg" width="100%" height="300px"></div>
+                <span><%=product[26].hotel_name%></span><br>
+                    <span><%=product[26].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">27</span><br>
+            </div>
+            <div class="img-slot">
+                <div id="div28"><img src="./Images/hotel28.jpeg" width="100%" height="300px"></div>
+                <span><%=product[27].hotel_name%></span><br>
+                    <span><%=product[27].price%><span style="color: rgb(123, 126, 128);">per night</span></span><span style="display: none;">28</span><br>
+            </div>
+ 
+         </div>
+    </div>
+    <footer>
+        <p>ShineNstar </p>
+    </footer>
+</body>
+
+
+    <script>
+        console.log("<%=product[0].hotel_name%>");
+            const list = document.querySelectorAll(".img-slot");
+            console.log(list);
+            list.forEach(data => {
+                const id =data.childNodes[7].textContent;
+                console.log(id);
+                data.addEventListener("click",function ()
+            {
+                console.log(id);
+               window.location.href = `/hotelInfo?id=${id}`;
+            })
+            });
+            // Assuming you have a way to check if the user is logged in
+            // Correctly assign the email variable
+// Correctly assign the email variable
+var email = "<%= userName %>";
+
+// Find the index of the '@' symbol
+var atIndex = email.indexOf('@');
+
+// Extract the part before the '@' symbol
+var username = email.substring(0, atIndex);
+
+// Remove any digits from the username
+username = username.replace(/\d+/g, '');
+
+// Display or use the username as needed
+document.getElementById("name").textContent = `Welcome ${username}`;
+
+</script>
+
+</html>

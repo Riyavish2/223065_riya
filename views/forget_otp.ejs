@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Images/hotel.jpg" type="image/x-icon">
+    <title>Enter OTP</title>
+</head>
+<style>body {
+    background-image: url(./Images/forOtp.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.otp-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.otp-header {
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.form-label {
+    color: #555; /* Slightly darker label color */
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem; /* Larger font size for OTP input */
+    background-color: transparent;
+    letter-spacing: 0.1em; /* Spacing between characters */
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #357abd;
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 15px;
+}
+
+input {
+    color: white;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .otp-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .otp-header {
+        font-size: 1.5rem;
+    }
+
+    .form-label {
+        font-size: 1.1rem;
+    }
+
+    .form-control {
+        font-size: 1.25rem;
+        padding: 8px;
+    }
+
+    .btn-primary {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .otp-container {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .otp-header {
+        font-size: 1.25rem;
+    }
+
+    .form-label {
+        font-size: 1rem;
+    }
+
+    .form-control {
+        font-size: 1rem;
+        padding: 6px;
+    }
+
+    .btn-primary {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+}
+</style>
+<body>
+    
+    <div class="otp-container">
+        <h2 class="otp-header">Enter OTP</h2>
+        <span><%=message%></span>
+
+        <form action="/forgetotp" method="POST">
+            <div class="mb-3">
+                <label for="otp" class="form-label">OTP:</label>
+                <input type="text" id="otp" name="otp" class="form-control" placeholder="Enter your 4-digit OTP" maxlength="4" required  autofocus>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

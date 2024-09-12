@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Layout Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Light background color for better contrast */
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #4a90e2; /* More vibrant header color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px; /* Added padding for spacing */
+    box-sizing: border-box;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: white; /* White background for the box */
+    width: calc(100% - 40px); /* Adjust width to account for padding */
+    box-sizing: border-box;
+}
+
+.box img {
+    width: 200px; /* Fixed width for images */
+    height: 200px;
+    border-radius: 8px; /* Rounded corners for images */
+    object-fit: cover; /* Ensure images cover the space without distortion */
+}
+
+.box p {
+    flex: 1;
+    margin: 0;
+    text-align: left;
+    color: #333; /* Darker text color for better readability */
+    line-height: 1.6; /* Improved line spacing */
+}
+
+.box:nth-child(2) img {
+    margin-right: 20px; /* Added space between text and image */
+}
+
+.box:nth-child(1) img {
+    margin-left: 20px; /* Added space between text and image */
+}
+
+a {
+    display: block;
+    text-align: center;
+    background-color: #4a90e2; /* Match header color */
+    text-decoration: none;
+    color: white;
+    width: 200px;
+    height: 50px;
+    margin: 20px auto; /* Center the link and add margin */
+    border-radius: 25px; /* More rounded button */
+    line-height: 50px; /* Center text vertically */
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover effects */
+}
+
+a:hover {
+    background-color: #357abd; /* Slightly darker color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    header {
+        height: 80px;
+        font-size: 30px;
+    }
+
+    .box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .box img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    .box p {
+        text-align: justify;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 70px;
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .box img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .box {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    a {
+        width: 180px;
+        height: 45px;
+        line-height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .box img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .box {
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+</style>
+<body>
+    <header>Shinenstar</header>
+
+    <div class="container">
+        <div class="box">
+            <img src="./info_images/stays1.jpeg" alt="Image 1">
+            <p>"At our hotel, we offer a range of stays to suit every traveler’s needs. Choose from our elegantly designed rooms, each equipped with modern amenities like high-speed Wi-Fi, flat-screen TVs, and luxurious bedding to ensure a comfortable stay. Our deluxe suites provide an added touch of luxury with spacious living areas and stunning views. Enjoy on-site facilities such as our state-of-the-art fitness center, relaxing spa, and gourmet restaurant. Whether you’re here for a romantic getaway, a family vacation, or a business trip, we offer special packages tailored to enhance your experience. Our central location puts you within easy reach of major attractions and convenient transport links. With our commitment to health and safety, you can relax and enjoy your stay with peace of mind."
+
+                Feel free to adjust the details to better match the specific features and services of your hotel.".</p>
+        </div>
+        <div class="box">
+            <p>TStays play a crucial role in the hospitality industry by defining the duration and experience of a guest’s visit. They encompass not just the length of time a guest spends at a hotel or other accommodation but also the overall quality of their experience, including the comfort, amenities, and service provided. A well-managed stay can significantly influence a guest's satisfaction and likelihood of returning, impacting the reputation and success of the establishment. From luxurious, extended vacations to brief, functional stops, the nature of stays varies widely, reflecting the diverse needs and preferences of travelers. Ensuring a positive stay experience often involves a blend of attentive service, personalized touches, and efficient operations to meet and exceed guest expectations.
+
+
+
+
+</p>
+            <img src="./info_images/stays2.jpeg" alt="Image 2">
+        </div>
+    </div>
+    <a href="./home">Back to profile</a>
+
+</body>
+</html>

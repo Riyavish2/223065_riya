@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+   
+        background-repeat: no-repeat;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    background-image: url(./info_images/success.jpg);
+            background-size: cover;
+            background-position: center;
+}
+
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+}
+
+.success-message {
+    text-align: center;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        border-radius: 10px;
+}
+
+.success-message h1 {
+    font-size: 36px;
+    color: #28a745;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.success-message p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #28a745;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #218838;
+}
+
+</style>
+<body>
+    <div class="success-container">
+        <div class="success-message">
+            <h1>Payment Successful!</h1>
+            <p>Thank you for your payment. Your transaction was completed successfully.</p>
+            <a href="/home" class="home-button">Go to Homepage</a>
+        </div>
+    </div>
+</body>
+</html>
